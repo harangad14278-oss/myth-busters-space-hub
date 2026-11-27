@@ -8,6 +8,7 @@ import { PhysicsSandbox } from "./components/PhysicsSandbox";
 import { SurvivalCalculator } from "./components/SurvivalCalculator";
 import { ScholarDebate } from "./components/ScholarDebate";
 import { SpaceQuiz } from "./components/SpaceQuiz";
+import { SpaceArcade } from "./components/SpaceArcade";
 import { GallerySection } from "./components/GallerySection";
 import { RegisterSection } from "./components/RegisterSection";
 import { soundEngine } from "./utils/soundEngine";
@@ -186,7 +187,7 @@ export default function App() {
                 Test Space &amp; Science Myths Yourself
               </h2>
               <p className={`mt-3 text-base ${isLight ? "text-slate-600" : "text-slate-300"}`}>
-                Explore our 5 hands-on Mission Control tools below—each includes quick instructions and instant results.
+                Explore our 6 hands-on Mission Control tools below—each includes quick instructions and instant results.
               </p>
             </div>
 
@@ -195,6 +196,7 @@ export default function App() {
             <SurvivalCalculator isLight={isLight} />
             <ScholarDebate isLight={isLight} />
             <SpaceQuiz isLight={isLight} />
+            <SpaceArcade isLight={isLight} />
           </section>
 
           {/* 4. Gallery Section ("Famous Myths Busted") */}
