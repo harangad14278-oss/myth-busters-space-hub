@@ -1,0 +1,6 @@
+{
+  "name": "Myth Busters: The Science & Space Hub",
+  "description": "Interactive space physics lab, AI rumor fact-checker, 17th-century science debate, and planetary survival telemetry hub.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

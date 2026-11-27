@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Chakra Petch", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes radar-sweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes shooting-star {
+  0% { transform: translateY(0) translateX(0); opacity: 1; }
+  100% { transform: translateY(340px) translateX(-420px); opacity: 0; }
+}
+
+@keyframes float-badge {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1.5deg); }
+}
+
+@keyframes stamp-slam {
+  0% { opacity: 0; transform: scale(2.1) rotate(-12deg); }
+  65% { opacity: 1; transform: scale(0.95) rotate(-4deg); }
+  100% { opacity: 1; transform: scale(1) rotate(-5deg); }
+}
+
+.animate-radar-sweep { animation: radar-sweep 12s linear infinite; }
+.animate-radar-sweep-fast { animation: radar-sweep 1.8s linear infinite; }
+.animate-orbit-slow { animation: orbit-slow 32s linear infinite; }
+.animate-orbit-reverse { animation: orbit-reverse 26s linear infinite; }
+.animate-float { animation: float-badge 4.5s ease-in-out infinite; }
+.animate-stamp-slam { animation: stamp-slam 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-radar-sweep,
+  .animate-radar-sweep-fast,
+  .animate-orbit-slow,
+  .animate-orbit-reverse,
+  .animate-float,
+  .animate-stamp-slam {
+    animation: none !important;
+  }
+}
